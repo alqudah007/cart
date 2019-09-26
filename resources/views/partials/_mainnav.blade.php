@@ -48,7 +48,7 @@
             <ul class="navbar-nav ml-auto">
                 {{--always show menu--}}
                 <li class="nav-item">
-                    <a class="nav-link" href=""><h6>{{__('Cart')}} <span class="badge badge-warning">0</span></h6></a>
+                    <a class="nav-link" href="/cart"><h6>{{__('Cart')}} <span class="badge badge-warning">0</span></h6></a>
                 </li>
                 <!-- Authentication Links -->
                 @guest
