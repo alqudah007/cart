@@ -37,7 +37,7 @@
 
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card h-100">
-                    <img class="card-img-top" src='{{asset("/img/$product->image_path")}}' alt="">
+                    <img class="card-img-top h-25" src='{{asset("/img/$product->image_path")}}' alt="">
                     <div class="card-header">{{$product->brand}}</div>
                     <div class="card-body">
                         <h4 class="card-title">{{$product->name}}</h4>

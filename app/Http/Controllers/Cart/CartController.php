@@ -30,11 +30,16 @@ class CartController extends Controller
          dump($isCartExists); // true
          dd(Session::has('cart')); // true but it may be empty bro !*/
         $currentCart = null;
-        dump('Session::has(\'cart\')');
+        $currentTotal = 0;
+
+        /*dump('Session::has(\'cart\')');
         dump(Session::has('cart'));
-        sleep(5);
+        sleep(2);*/
+
         if (Session::has('cart')) {
             $currentCart = Session::get('cart');
+            $currentTotal = Session::get('cart')['total'];
+
             if (array_key_exists($product->id, $currentCart)) {
                 //dump('item already in cart');
                 //Session::get('cart')[$product->id]['quantity']++; THIS IS OK
@@ -42,17 +47,18 @@ class CartController extends Controller
                 // update the quantity of the existance
                 $currentCart[$product->id]['quantity']++;
 
+                $currentTotal += ((float)$product->price * $currentCart[$product->id]['quantity']);
+
             } else {
                 //  add the new item to the cart
                 $currentCart[$product->id] = [
-
                     'quantity' => 1,
                     'price' => $product->price,
                     'product' => $product,
-
-
                 ];
 
+
+                $currentTotal+= (float)$product->price;
 
             }
         } else {
@@ -62,12 +68,15 @@ class CartController extends Controller
                     'quantity' => 1,
                     'price' => $product->price,
                     'product' => $product,
-                ]
-
+                ],
             ];
 
 
+            $currentTotal += (float)$product->price;
+
         }
+
+        $currentCart['total'] = $currentTotal;
         Session::put('cart', $currentCart);
         return back();
 
@@ -131,4 +140,11 @@ class CartController extends Controller
         dd(Session::get('cart'));
     }
 
+
+    public function sessionFlushAyman()
+    {
+        Session::flush();
+        return 'Done';
+
+    }
 }

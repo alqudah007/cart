@@ -34,7 +34,8 @@
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -48,16 +49,45 @@
             <ul class="navbar-nav ml-auto">
                 {{--always show menu--}}
                 <li class="nav-item">
-                    <h6><a class="nav-link" href="/cart">
-                            {{__('Cart')}}
-                            <span class="badge badge-danger text-white">
-                                {{ \Session::has('cart') ? count(\Session::get('cart')) : 0 }}
-                            </span>
-                            <span>
+                    <a class="nav-link" href="/cart">
+                        {{__('Cart index')}}
+                        |
+                        <span class="badge badge-pill badge-danger text-white">
+                          {{ Session::has('cart') ? count(Session::get('cart')) : 0 }}
+                       </span>
+                        |
+                        <span class="badge badge-pill badge-success text-white">
+                          {{ Session::has('cart') ? Session::get('cart')['total'] : "0.0 $"}} $
+                       </span>
 
-                            </span>
-                    </a></h6>
+
+                    </a>
+
+
                 </li>
+
+
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        cart mangment
+                        <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{route('cart.clear')}}">
+                            {{ __('cart clear') }}
+                        </a>
+
+                        <a class="dropdown-item" href="{{route('cart.dump')}}">
+                            {{ __('cart dump') }}
+                        </a>
+
+
+                    </div>
+                </li>
+
+
                 <!-- Authentication Links -->
                 @guest
 
@@ -72,7 +102,8 @@
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
