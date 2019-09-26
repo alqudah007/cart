@@ -11,9 +11,18 @@
 |
 */
 
-
 Auth::routes();
 
 Route::get('/', 'Product\ProductController@index')->name('product.index');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/add-to-cart', 'Cart\CartController@addToCart')->name('cart.add');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes for cart
+|--------------------------------------------------------------------------
+|
+|
+*/
+Route::get('/cart', 'Cart\CartController@index')->name('cart.index');
+Route::get('/cart/add/{product}', 'Cart\CartController@addToCart')->name('cart.add');
+Route::get('/dump-session-cart', 'Cart\CartController@dumpsessioncart');

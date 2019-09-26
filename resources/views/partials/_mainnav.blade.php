@@ -48,7 +48,15 @@
             <ul class="navbar-nav ml-auto">
                 {{--always show menu--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="/cart"><h6>{{__('Cart')}} <span class="badge badge-warning">0</span></h6></a>
+                    <h6><a class="nav-link" href="/cart">
+                            {{__('Cart')}}
+                            <span class="badge badge-danger text-white">
+                                {{ \Session::has('cart') ? count(\Session::get('cart')) : 0 }}
+                            </span>
+                            <span>
+
+                            </span>
+                    </a></h6>
                 </li>
                 <!-- Authentication Links -->
                 @guest

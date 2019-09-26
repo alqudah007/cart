@@ -5,7 +5,7 @@
 @section('content')
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-        @php
+       {{-- @php
             $cartName='cart_'.Session::getId();// Do i need to rename the cart  ? no the session always has its own id for each user who use the session
            // 'cart2_'.\Session::getId() = array(); Error
            //'cart2_'.\Session::getId()= []; ErrorError
@@ -18,7 +18,7 @@
 
 
             //dd($cartName);
-        @endphp
+        @endphp--}}
         <h2 class="text-muted text-danger text-break">session::getId() {{Session::getId()}}</h2>
         <h2 class="text-muted text-success text-break">{{--cart: {{ Session::get($cartName)}}--}}</h2>
 
@@ -49,7 +49,7 @@
                         {{$product->price}} $
                     </div>
                     <div class="card-footer">
-                        <a href="{{route('cart.add')}}" class="btn btn-primary"> + Add to cart </a>
+                        <a href="{{route('cart.add',$product)}}" class="btn btn-primary"> + Add to cart </a>
                     </div>
                 </div>
             </div>
