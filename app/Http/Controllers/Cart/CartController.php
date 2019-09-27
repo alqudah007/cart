@@ -13,7 +13,8 @@ class CartController extends Controller
 
     public function index()
     {
-        dd('index cart items');
+        # view all the cart items
+        return view('cart.index');
     }
 
 
@@ -30,7 +31,7 @@ class CartController extends Controller
          dump($isCartExists); // true
          dd(Session::has('cart')); // true but it may be empty bro !*/
         $currentCart = null;
-        $currentTotal = 0;
+        $currentTotal = Session::has('cart') ? Session::get('cart')['total'] : 0;
 
         /*dump('Session::has(\'cart\')');
         dump(Session::has('cart'));
@@ -38,16 +39,16 @@ class CartController extends Controller
 
         if (Session::has('cart')) {
             $currentCart = Session::get('cart');
-            $currentTotal = Session::get('cart')['total'];
 
             if (array_key_exists($product->id, $currentCart)) {
                 //dump('item already in cart');
                 //Session::get('cart')[$product->id]['quantity']++; THIS IS OK
+                //  $currentCart[$product->id]['quantity'])THIS IS OK
 
                 // update the quantity of the existance
                 $currentCart[$product->id]['quantity']++;
 
-                $currentTotal += ((float)$product->price * $currentCart[$product->id]['quantity']);
+                $currentTotal+= (float)$product->price;
 
             } else {
                 //  add the new item to the cart
@@ -81,53 +82,7 @@ class CartController extends Controller
         return back();
 
 
-        /* if (!Session::has('cart') or empty(Session::get('cart'))) {
 
-
-             dump('no array in session or it is empty');
-
-             // SOLUTION A : make cart as array.
-             // SOLUTION B : make cart as php class then make an object from it .
-
-             $cart = [
-                 $product->id => [
-                     'quantity' => 1,
-                     'price' => $product->price,
-                     'product' => $product,
-                 ]
-
-             ];
-
-
-             Session::put('cart', $cart);
-
-             //(Session::get('cart'));
-
-             return back();
-         } else {
-             dump(' cart is there already');
-
-             if (array_key_exists($product->id, Session::get('cart'))) {
-                 dump('we have this  item already in cart');
-
-
-             } else {
-
-                 $cart = [
-                     $product->id => [
-                         'quantity' => 1,
-                         'price' => $product->price,
-                         'product' => $product,
-                     ]
-
-                 ];
-
-
-             }
-
-
-         }
-         //dd($request);*/
 
 
     }
@@ -137,15 +92,17 @@ class CartController extends Controller
     public function dumpsessioncart()
     {
 
-        dd(Session::get('cart'));
+        dump(Session::get('cart'));
+        dump(session()->all());// dump session array
     }
 
 
     public function sessionFlushAyman()
     {
-       // Session::flush(); // this delete all sesoion data !!
+       // Session::flush(); // this delete all session data !!
 
-        session::forget('cart');
+        //session::forget('cart'); // Better ( official ) OK
+       session::pull('cart');// ALso pull from array of session OK
 
         return 'Done';
 

@@ -52,7 +52,7 @@
                     <a class="nav-link" href="/cart">
                         {{__('Cart index')}}
                         <span class="badge badge-pill badge-danger text-white">
-                          {{ Session::has('cart') ? count(Session::get('cart')) : 0 }}
+                          {{ Session::has('cart') ? count(Session::get('cart'))-1  : 0 }}
                        </span>
 
                     </a>
