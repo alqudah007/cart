@@ -3,14 +3,24 @@
 @section('content')
     Cart index
 
-    <ul class="list-group">
-    @foreach(\Session::get('cart') as $key=>$value)
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            {{$key}}
-            <span class="badge badge-primary badge-pill">{{$value['price']}}</span>
-        </li>
-        @endforeach
-    </ul>
+
+    <div class="card mt-5">
+        <div class="card-header">
+            <h4>Cart Items</h4>
+        </div>
+        <ul class="list-group ">
+            @foreach(\Session::get('cart') as $cartIndex=>$CartIndexValue)
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{$cartIndex}}
+                    name:<span class="badge badge-success badge-pill">{{$CartIndexValue['product']['name']}}</span>
+                    brand:<span class="badge badge-success badge-pill">{{$CartIndexValue['product']['brand']}}</span>
+                    price:<span class="badge badge-primary badge-pill">{{$CartIndexValue['price']}}</span>
+                    quantity:<span class="badge badge-primary badge-pill">{{$CartIndexValue['quantity']}}</span>
+                </li>
+            @endforeach
+        </ul>
+
+    </div>
 
 
 @stop
