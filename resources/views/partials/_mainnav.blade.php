@@ -48,7 +48,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 {{--always show menu--}}
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link" href="/cart">
                         {{__('Cart index')}}
                         <span class="badge badge-pill badge-danger text-white">
