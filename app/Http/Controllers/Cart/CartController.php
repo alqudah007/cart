@@ -143,7 +143,10 @@ class CartController extends Controller
 
     public function sessionFlushAyman()
     {
-        Session::flush();
+       // Session::flush(); // this delete all sesoion data !!
+
+        session::forget('cart');
+
         return 'Done';
 
     }

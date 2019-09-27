@@ -51,18 +51,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/cart">
                         {{__('Cart index')}}
-                        |
                         <span class="badge badge-pill badge-danger text-white">
                           {{ Session::has('cart') ? count(Session::get('cart')) : 0 }}
                        </span>
-                        |
-                        <span class="badge badge-pill badge-success text-white">
-                          {{ Session::has('cart') ? Session::get('cart')['total'] : "0.0 $"}} $
-                       </span>
-
 
                     </a>
 
+                    <span class="badge badge-pill badge-success text-white">
+                          {{ Session::has('cart') ? Session::get('cart')['total'] : "0.0 $"}}
+                       </span>
 
                 </li>
 
