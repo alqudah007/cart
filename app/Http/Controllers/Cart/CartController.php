@@ -107,4 +107,10 @@ class CartController extends Controller
         return 'Done';
 
     }
+
+
+    public function checkout(){
+        return view('cart.checkout');
+    }
+
 }
