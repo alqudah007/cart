@@ -1,35 +1,5 @@
-<!-- Navigation -->
-{{--
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
---}}
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top ">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top mb-5">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -49,17 +19,19 @@
             <ul class="navbar-nav ml-auto">
                 {{--always show menu--}}
                 <li class="nav-item ">
-                    <a class="nav-link" href="/cart">
+                    <a class="nav-link btn" href="/cart">
                         {{__('Cart index')}}
+                        |
                         <span class="badge badge-pill badge-danger text-white">
                           {{ Session::has('cart') ? count(Session::get('cart'))-1  : 0 }}
                        </span>
-
-                    </a>
-
-                    <span class="badge badge-pill badge-success text-white">
+                        |
+                        <span class="badge badge-pill badge-success text-white">
                           {{ Session::has('cart') ? Session::get('cart')['total'] : "0.0 $"}}
                        </span>
+                    </a>
+
+
 
                 </li>
 

@@ -35,6 +35,7 @@
         </ul>
 
     </div>
-
-
+    <div>
+        <a href="{{route('cart.checkout')}}" class="btn btn-danger">cart.checkout</a>
+    </div>
 @stop
