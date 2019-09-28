@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 
-
 class CartController extends Controller
 {
     //
@@ -118,7 +117,7 @@ class CartController extends Controller
     // prepare how much we need to charge Him
     public function pay(Request $request)
     {
-        //  dd($request); this contain strip token now
+        // dd($request);// this contain strip token now
         // we get token because the user provide correct card No and CCV no
         // here may be u can use some package for strip :
         // >>>>>>>>>>>>>>> https://stripe.com/docs/libraries#third-party-plugins
@@ -131,24 +130,40 @@ class CartController extends Controller
         // Copy - Past as is from link upove ^^^^^
 
 
+
         // Set your secret key: remember to change this to your live secret key in production
         // See your keys here: https://dashboard.stripe.com/account/apikeys
+
         \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd');
 
         $session = \Stripe\Checkout\Session::create([
             'payment_method_types' => ['card'],
+            //'payment_method_types' => $request->stripeToken,//ERROR Ayman add this
             'line_items' => [[
-                'name' => 'T-shirt',
-                'description' => 'Comfortable cotton t-shirt',
+                'name' => 'AYMAN - Cart - Hope-pppppppppppp',
+                'description' => 'z3bborrrrrrrrrrrrrrrrrr',
                 'images' => ['https://example.com/t-shirt.png'],
-                'amount' => 500,
+                'amount' => 400 ,
                 'currency' => 'usd',
                 'quantity' => 1,
+
             ]],
-            'success_url' => 'https://example.com/success',
-            'cancel_url' => 'https://example.com/cancel',
+            'success_url' => 'http://127.0.0.1:8000/pay-done',
+            'cancel_url' => 'http://127.0.0.1:8000/',
         ]);
+
+
+       // dump($session->id); //NEDED for more steps payment session
+
+
 
     }
 
+
+
+
+    public function paydone()
+    {
+        return view('cart.paydone');
+    }
 }

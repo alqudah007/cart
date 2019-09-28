@@ -29,3 +29,4 @@ Route::get('/dump-session-cart', 'Cart\CartController@dumpsessioncart')->name('c
 Route::get('/clear-session-data', 'Cart\CartController@sessionFlushAyman')->name('cart.clear');
 Route::get('/cart-checkout', 'Cart\CartController@checkout')->name('cart.checkout');// get strip token
 Route::post('/cart-pay', 'Cart\CartController@pay')->name('cart.pay');// send token to my laravel
+Route::get('/pay-done', 'Cart\CartController@paydone')->name('cart.paydone');// cart.paydone
