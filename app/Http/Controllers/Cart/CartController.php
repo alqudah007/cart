@@ -117,8 +117,11 @@ class CartController extends Controller
     public function pay(Request $request)
     {
         //  dd($request); this contain strip token now
-        // we get token becuse the user provide correct card No and CCV no
-
+        // we get token because the user provide correct card No and CCV no
+        // here may be u can use some package for strip :
+        // >>>>>>>>>>>>>>> https://stripe.com/docs/libraries#third-party-plugins
+        // OR install native package :
+        // >>>>>>>>>>>>>>> https://stripe.com/docs/libraries#php
 
     }
 
