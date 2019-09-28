@@ -27,4 +27,5 @@ Route::get('/cart', 'Cart\CartController@index')->name('cart.index');
 Route::get('/cart/add/{product}', 'Cart\CartController@addToCart')->name('cart.add');
 Route::get('/dump-session-cart', 'Cart\CartController@dumpsessioncart')->name('cart.dump');
 Route::get('/clear-session-data', 'Cart\CartController@sessionFlushAyman')->name('cart.clear');
-Route::get('/cart-checkout', 'Cart\CartController@checkout')->name('cart.checkout');
+Route::get('/cart-checkout', 'Cart\CartController@checkout')->name('cart.checkout');// get strip token
+Route::post('/cart-pay', 'Cart\CartController@pay')->name('cart.pay');// send token to my laravel

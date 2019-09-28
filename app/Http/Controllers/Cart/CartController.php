@@ -48,7 +48,7 @@ class CartController extends Controller
                 // update the quantity of the existance
                 $currentCart[$product->id]['quantity']++;
 
-                $currentTotal+= (float)$product->price;
+                $currentTotal += (float)$product->price;
 
             } else {
                 //  add the new item to the cart
@@ -59,7 +59,7 @@ class CartController extends Controller
                 ];
 
 
-                $currentTotal+= (float)$product->price;
+                $currentTotal += (float)$product->price;
 
             }
         } else {
@@ -82,9 +82,6 @@ class CartController extends Controller
         return back();
 
 
-
-
-
     }
 
 
@@ -99,18 +96,30 @@ class CartController extends Controller
 
     public function sessionFlushAyman()
     {
-       // Session::flush(); // this delete all session data !!
+        // Session::flush(); // this delete all session data !!
 
         //session::forget('cart'); // Better ( official ) OK
-       session::pull('cart');// ALso pull from array of session OK
+        session::pull('cart');// ALso pull from array of session OK
 
         return 'Done';
 
     }
 
 
-    public function checkout(){
+    public function checkout()
+    {
         return view('cart.checkout');
+    }
+
+
+    // this will recieve the STRIP form with _token ; then
+    // prepare how much we need to charge Him
+    public function pay(Request $request)
+    {
+        //  dd($request); this contain strip token now
+        // we get token becuse the user provide correct card No and CCV no
+
+
     }
 
 }
