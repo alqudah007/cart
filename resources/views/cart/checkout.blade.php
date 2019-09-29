@@ -56,7 +56,8 @@
             // Collect more data from user to use in after charge ( order )
             var options = {
                 name: document.getElementById('card-holdername').value,
-                address:document.getElementById('address').value
+                address_country:document.getElementById('address').value,
+                address_line1:document.getElementById('address').value,
             };
             // End Ayman add more options here to the form   Stripe.js reference
             // CHANGE THE FOLOWING LINE TO ADD OPTIONS

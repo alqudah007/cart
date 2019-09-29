@@ -6,7 +6,7 @@
       <change afterPath="$PROJECT_DIR$/../TestMyPackage/resources/views/admin.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TestMyPackage/resources/views/admin2.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../student_oriantaion_course/.idea/student_oriantaion_course.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cart/paydone.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/paydone.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cart/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cart/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../applications.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../auth_with_role_middleware" beforeDir="false" afterPath="$PROJECT_DIR$/../auth_with_role_middleware" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../aymanPKG" beforeDir="false" afterPath="$PROJECT_DIR$/../aymanPKG" afterDir="false" />
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/cart/checkout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret line="157" column="47" selection-start-line="157" selection-start-column="47" selection-end-line="157" selection-end-column="47" />
+            <state relative-caret-position="208">
+              <caret line="57" column="20" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="20" />
               <folding>
                 <element signature="e#514#795#0#HTML" />
                 <element signature="e#0#9755#0#Blade" />
@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Cart/CartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="154" column="74" lean-forward="true" selection-start-line="154" selection-start-column="74" selection-end-line="154" selection-end-column="74" />
+            <state relative-caret-position="1728">
+              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
               <folding>
                 <element signature="e#45#69#0#PHP" expanded="true" />
                 <element signature="e#354#2266#0#PHP" />
@@ -81,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/cart/paydone.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="261">
+              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
               <folding>
                 <element signature="e#1393#1400#1#HTML" expanded="true" />
                 <element signature="e#1875#1882#1#HTML" expanded="true" />
@@ -127,8 +127,8 @@
         <option value="$PROJECT_DIR$/resources/views/cart/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/cart/checkout.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Cart/CartController.php" />
         <option value="$PROJECT_DIR$/resources/views/cart/paydone.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Cart/CartController.php" />
       </list>
     </option>
   </component>
@@ -357,12 +357,12 @@
       <option name="presentableId" value="Default" />
       <updated>1569427329872</updated>
       <workItem from="1569427331306" duration="36524000" />
-      <workItem from="1569597039639" duration="35325000" />
+      <workItem from="1569597039639" duration="36206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71849000" />
+    <option name="totallyTimeSpent" value="72730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -600,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/cart/paydone.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="261">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
           <folding>
             <element signature="e#1393#1400#1#HTML" expanded="true" />
             <element signature="e#1875#1882#1#HTML" expanded="true" />
@@ -609,29 +609,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cart/checkout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="157" column="47" selection-start-line="157" selection-start-column="47" selection-end-line="157" selection-end-column="47" />
-          <folding>
-            <element signature="e#514#795#0#HTML" />
-            <element signature="e#0#9755#0#Blade" />
-            <element signature="e#4381#8932#0#Blade" />
-            <element signature="e#9060#9079#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Cart/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="154" column="74" lean-forward="true" selection-start-line="154" selection-start-column="74" selection-end-line="154" selection-end-column="74" />
+        <state relative-caret-position="1728">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
           <folding>
             <element signature="e#45#69#0#PHP" expanded="true" />
             <element signature="e#354#2266#0#PHP" />
             <element signature="e#2298#2433#0#PHP" />
             <element signature="e#2440#2704#0#PHP" />
             <element signature="e#2712#2788#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cart/checkout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="57" column="20" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="20" />
+          <folding>
+            <element signature="e#514#795#0#HTML" />
+            <element signature="e#0#9755#0#Blade" />
+            <element signature="e#4381#8932#0#Blade" />
+            <element signature="e#9060#9079#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -122,7 +122,7 @@ class CartController extends Controller
         # this method used by german video and all other videos on the net for direct check out !
 
 
-        \Stripe\Stripe::setApiKey('#sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip
+        \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip
         try {
 
             $AMOUNT_in_cent = \Session::get('cart')['total'];
@@ -153,8 +153,8 @@ class CartController extends Controller
 
         } catch (\Exception $e) {
             Session::flash('pay-faild', 'pay-faild pay-faild pay-faild ');
-            //dd($e->getMessage()); // "Invalid API Key provided: #sk_test*******************************eIxd"
-            return response()->redirectToRoute('cart.paydone')->withErrors($e->getMessage());
+            dd($e->getMessage()); // "Invalid API Key provided: #sk_test*******************************eIxd"
+            return response()->redirectToRoute('cart.paydone')->withErrors('error',$e->getMessage());
         }
 
 
