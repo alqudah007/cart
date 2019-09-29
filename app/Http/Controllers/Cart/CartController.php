@@ -136,26 +136,33 @@ class CartController extends Controller
 
         \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd');
 
-        $session = \Stripe\Checkout\Session::create([
-            'payment_method_types' => ['card'],
+        //$session = \Stripe\Checkout\Session::create([  <<<=== OLD
+
+        $session = \Stripe\Charge::create([
+           // 'payment_method_types' => ['card'], <<<-- Removed by Ayman
+            'source' =>$request->stripeToken,
+            'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
+            'amount' => 9900 ,
+            'currency' => 'usd',
             //'payment_method_types' => $request->stripeToken,//ERROR Ayman add this
-            'line_items' => [[
+           /* 'line_items' => [[
                 'name' => 'AYMAN - Cart - Hope-pppppppppppp',
                 'description' => 'z3bborrrrrrrrrrrrrrrrrr',
                 'images' => ['https://example.com/t-shirt.png'],
                 'amount' => 400 ,
                 'currency' => 'usd',
                 'quantity' => 1,
+               //Add Byayman Based On Germany video
 
             ]],
-            'success_url' => 'http://127.0.0.1:8000/pay-done',
-            'cancel_url' => 'http://127.0.0.1:8000/',
+            'success_url' => 'http://127.0.0.1:8000/cart-checkout',
+            'cancel_url' => 'http://127.0.0.1:8000/cart-checkout',*/
         ]);
 
 
-       // dump($session->id); //NEDED for more steps payment session
+         //dump($session->id); //NEDED for more steps payment session
 
-
+        //return back();
 
     }
 
