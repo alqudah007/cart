@@ -49,7 +49,18 @@
                         <div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
-                            <strong>ERROR !</strong> NO MOENY !!!!!
+                            <strong>ERROR !</strong>
+                            <div>
+
+                               @if ($errors->any())
+                                   @foreach ($errors as $error)
+                                      ERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRROR:::::::
+                                        {{$error}}
+                                   @endforeach
+
+                               @endif
+                            </div>
+
                         </div>
                     @endif
                 </div>
@@ -60,10 +71,10 @@
                         <div class="col-md-12 border border-danger bg-light">
                             PAY DashBoard
 
-                            <div> Amount : ${{\Session::get('aymanCharge')->amount}}</div>
-                            <div> description : ${{\Session::get('aymanCharge')->description}}</div>
+                            <div> Amount : ${{ \Session::has('aymanCharge') ? \Session::get('aymanCharge')->amount :""}}</div>
+                            <div> description : ${{ \Session::has('aymanCharge') ?  \Session::get('aymanCharge')->description : ""}}</div>
                             <div>
-                                <a class="btn btn-outline-danger" href=" {{\Session::get('aymanCharge')->receipt_url  }}">
+                                <a class="btn btn-outline-danger" href=" {{ \Session::has('aymanCharge') ?  \Session::get('aymanCharge')->receipt_url  :""}}">
                                     Click to see the money gone form you</a>
 
                             </div>
