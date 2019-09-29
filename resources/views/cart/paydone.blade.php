@@ -40,10 +40,10 @@
                         <div class="alert alert-success alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
-                            <strong>Congratulations!</strong>
-                            You successfully PAYYYYYYYYYYYYYYYYYYYYYYYYY FOR ME !
+                            <strong>Congratulations!</strong> You successfully PAYYYYYYYYYYYYYYYYYYYYYYYYY FOR ME !
                             <br>
-                           <a class="btn btn-warning" href=" {{\Session::get('receipt_url')  }}" >Click to see the money gone form you</a>
+
+
                         </div>
                     @elseif (\Session::has('pay-faild'))
                         <div class="alert alert-danger alert-dismissible" role="alert">
@@ -58,7 +58,17 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12 border border-danger bg-light">
-                            XXXXXXXXXXXX PAY DONE XXXXXX
+                            PAY DashBoard
+
+                            <div> Amount : ${{\Session::get('aymanCharge')->amount}}</div>
+                            <div> description : ${{\Session::get('aymanCharge')->description}}</div>
+                            <div>
+                                <a class="btn btn-outline-danger" href=" {{\Session::get('aymanCharge')->receipt_url  }}">
+                                    Click to see the money gone form you</a>
+
+                            </div>
+
+
                         </div>
                     </div>
                 </div>

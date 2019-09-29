@@ -153,6 +153,10 @@
                             <li>https://stripe.com/docs/payments</li>
                             <li>https://stripe.com/docs/stripe-js</li>
                         </ol>
+
+                        <div>
+                            4242 4242 4242 4242
+                        </div>
                     </div>
 
 

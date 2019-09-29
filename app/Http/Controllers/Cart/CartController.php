@@ -131,7 +131,7 @@ class CartController extends Controller
                 'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
                 'amount' => $AMOUNT_in_cent * 100,//convert cent to dollar
                 'currency' => 'usd',
-                // ayman
+                // ayman add these based on the documentation stripe
                 'capture' => true,
                 'customer' => \auth::id(),
                 'metadata' => [
@@ -146,8 +146,9 @@ class CartController extends Controller
 
             Session::flash('pay-done', '$$$$$$$$$ PayDOneBRO $$$$$$$$ ');
             Session::flash('receipt_url', $aymanCharge->receipt_url);
+            Session::put('aymanCharge', $aymanCharge);
             Session::forget('cart');
-            dump($aymanCharge); // this contian all the charge details
+            //($aymanCharge); // this contian all the charge details
             return response()->redirectToRoute('cart.paydone');
 
         } catch (\Exception $e) {
