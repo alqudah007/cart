@@ -55,8 +55,8 @@
             // Ayman add more options here to the form   Stripe.js reference
             // Collect more data from user to use in after charge ( order )
             var options = {
-                name: document.getElementById('cardholdername').value,
-                address_country:document.getElementById('address_country').value
+                name: document.getElementById('card-holdername').value,
+                address:document.getElementById('address').value
             };
             // End Ayman add more options here to the form   Stripe.js reference
             // CHANGE THE FOLOWING LINE TO ADD OPTIONS
@@ -231,11 +231,17 @@
                             <form action="{{route('cart.pay')}}" method="post" id="payment-form">
                                 @csrf
                                 <div class="form-row">
-                                    <input class="form-control" type="text" id="cardholdername" name="cardHOLDER" placeholder="card holder name">
+                                    <label for="card-holdername">
+                                        card-holdername
+                                    </label>
+                                    <input class="form-control" type="text" id="card-holdername" name="card-holdername" placeholder="card holder name">
 
                                 </div>
                                 <div class="form-row">
-                                    <input class="form-control" type="text" id="address_country" name="ADDRESSS" placeholder="address_country">
+                                    <label for="address">
+                                        address
+                                    </label>
+                                    <input class="form-control" type="text" id="address" name="address" placeholder="address">
 
                                 </div>
 
@@ -246,20 +252,17 @@
                                     </label>
                                     <div id="card-element" class="border border-warning" style="width: 100%">
                                         <!-- A Stripe Element will be inserted here. -->
+
                                     </div>
 
                                     <!-- Used to display form errors. -->
                                     <div id="card-errors" role="alert"></div>
                                 </div>
 
-                                <button class="btn btn-lg btn-success" type="submit">Submit Payment to strip {\{cart.pay}\}</button>
+                                <button class="btn btn-lg btn-success">Submit Payment to strip {\{cart.pay}\}</button>
                             </form>
 
                         </div>
-                    </div>
-
-                    <div>
-                        <a href="{{route('cart.pay')}}" class="btn btn-danger">cart.pay</a>
                     </div>
 
 

@@ -117,81 +117,46 @@ class CartController extends Controller
     // prepare how much we need to charge Him
     public function pay(Request $request)
     {
-        // dd($request);// this contain strip token now
-        // we get token because the user provide correct card No and CCV no
-        // here may be u can use some package for strip :
-        // >>>>>>>>>>>>>>> https://stripe.com/docs/libraries#third-party-plugins
-        // OR install native package :
-        // >>>>>>>>>>>>>>> https://stripe.com/docs/libraries#php
-
-
-        // server side integration in strip
-        // >>> https://stripe.com/docs/payments/checkout/server#create-checkout-session
-        // Copy - Past as is from link upove ^^^^^
-
-
-
-        // Set your secret key: remember to change this to your live secret key in production
-        // See your keys here: https://dashboard.stripe.com/account/apikeys
-
-       /* \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip*/
-
-        //$session = \Stripe\Checkout\Session::create([  <<<=== OLD
-
-        /*$session = \Stripe\Charge::create([
-           // 'payment_method_types' => ['card'], <<<-- Removed by Ayman
-            'source' =>$request->stripeToken,
-            'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
-            'amount' => 9900 ,
-            'currency' => 'usd',
-            //'payment_method_types' => $request->stripeToken,//ERROR Ayman add this
-           /* 'line_items' => [[
-                'name' => 'AYMAN - Cart - Hope-pppppppppppp',
-                'description' => 'z3bborrrrrrrrrrrrrrrrrr',
-                'images' => ['https://example.com/t-shirt.png'],
-                'amount' => 400 ,
-                'currency' => 'usd',
-                'quantity' => 1,
-               //Add Byayman Based On Germany video
-
-            ]],
-            'success_url' => 'http://127.0.0.1:8000/cart-checkout',
-            'cancel_url' => 'http://127.0.0.1:8000/cart-checkout',
-        ]);
-
-
-         //dump($session->id); //NEDED for more steps payment session
-
-        //return back();*/
+        # 2 ways for charge !!
+        # THIS METHOD  CALLED https://stripe.com/docs/api/charges/create
+        # this method used by german video and all other videos on the net for direct check out !
 
 
         \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip
-        try{
+        try {
 
-            $session = \Stripe\Charge::create([
-                'source' =>$request->stripeToken,
+            $AMOUNT_in_cent = \Session::get('cart')['total'];
+            $aymanCharge = \Stripe\Charge::create([
+                'source' => $request->stripeToken,
                 'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
-                'amount' => Session::get('cart')['total'],
+                'amount' => $AMOUNT_in_cent * 100,//convert cent to dollar
                 'currency' => 'usd',
-                'customer' =>'MANGAAAA'
+                // ayman
+                'capture' => true,
+                'customer' => \auth::id(),
+                'metadata' => [
+                    'namezzzzz' => 'z3moootzzzzz',
+                    'type' =>'XXlarg - mazarati',
+                    'address' =>$request->address,
+
+                ],
+
+
             ]);
 
-            Session::put('paydone', '$$$$$$$$$ PayDOneBRO $$$$$$$$ ');
+            Session::flash('pay-done', '$$$$$$$$$ PayDOneBRO $$$$$$$$ ');
+            Session::flash('receipt_url', $aymanCharge->receipt_url);
+            Session::forget('cart');
+            dump($aymanCharge); // this contian all the charge details
             return response()->redirectToRoute('cart.paydone');
 
+        } catch (\Exception $e) {
+            Session::flash('pay-faild', 'pay-faild pay-faild pay-faild ');
+            return response()->redirectToRoute('cart.paydone');
         }
-        catch (\Exception $e){
-
-
-        }
-
-
-
 
 
     }
-
-
 
 
     public function paydone()
