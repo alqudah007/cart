@@ -49,10 +49,10 @@
                         <div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
-                            <strong>ERROR !</strong>
+                            <strong>ERROR ! Contact AYMANAN@AYMAN[dot]come</strong>
                             <div>
 
-                               @if ($errors->any())
+                               @if (count($errors) > 0 ) {{--// $errors->any() --}}
                                    @foreach ($errors as $error)
                                       ERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRROR:::::::
                                         {{$error}}
