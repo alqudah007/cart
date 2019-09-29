@@ -252,7 +252,7 @@
                                     <div id="card-errors" role="alert"></div>
                                 </div>
 
-                                <button class="btn btn-lg btn-success">Submit Payment to strip {\{cart.pay}\}</button>
+                                <button class="btn btn-lg btn-success" type="submit">Submit Payment to strip {\{cart.pay}\}</button>
                             </form>
 
                         </div>

@@ -134,11 +134,11 @@ class CartController extends Controller
         // Set your secret key: remember to change this to your live secret key in production
         // See your keys here: https://dashboard.stripe.com/account/apikeys
 
-        \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd');
+       /* \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip*/
 
         //$session = \Stripe\Checkout\Session::create([  <<<=== OLD
 
-        $session = \Stripe\Charge::create([
+        /*$session = \Stripe\Charge::create([
            // 'payment_method_types' => ['card'], <<<-- Removed by Ayman
             'source' =>$request->stripeToken,
             'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
@@ -156,13 +156,38 @@ class CartController extends Controller
 
             ]],
             'success_url' => 'http://127.0.0.1:8000/cart-checkout',
-            'cancel_url' => 'http://127.0.0.1:8000/cart-checkout',*/
+            'cancel_url' => 'http://127.0.0.1:8000/cart-checkout',
         ]);
 
 
          //dump($session->id); //NEDED for more steps payment session
 
-        //return back();
+        //return back();*/
+
+
+        \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip
+        try{
+
+            $session = \Stripe\Charge::create([
+                'source' =>$request->stripeToken,
+                'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
+                'amount' => Session::get('cart')['total'],
+                'currency' => 'usd',
+                'customer' =>'MANGAAAA'
+            ]);
+
+            Session::put('paydone', '$$$$$$$$$ PayDOneBRO $$$$$$$$ ');
+            return response()->redirectToRoute('cart.paydone');
+
+        }
+        catch (\Exception $e){
+
+
+        }
+
+
+
+
 
     }
 
