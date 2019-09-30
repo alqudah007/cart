@@ -17,17 +17,6 @@ class CartController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->only(['checkout', 'pay']);
-        # strip shared user needed since the strip read that useremail is not match with strip test
-        # https://stripe.com/docs/connect/shared-customers
-
-        /*
-           You created that customer with your 1st test key. These customers will be invisible (as well as any cards,
-           subscriptions, etc) to your second test key.  Once you changed / moved key
-          you'll need to recreate these test customers, they are not shared between test keys and accounts.
-
-        */
-
-
     }
 
     public function index()
@@ -156,7 +145,8 @@ class CartController extends Controller
                 'currency' => 'usd',
                 // ayman add these based on the documentation stripe
                 'capture' => true,
-                'customer' => \auth::id(),
+                /*'customer' => \auth::id(), If I add this i need to see customer share in strip   # strip shared user needed since the strip read that user id  is not match with strip test
+                # https://stripe.com/docs/connect/shared-customers*/
                 'metadata' => [
                     'namezzzzz' => 'z3moootzzzzz',
                     'type' => 'XXlarg - mazarati',
@@ -173,7 +163,7 @@ class CartController extends Controller
 
             // $orderObj=new Order();
             Order::Create([
-                'user_id' => auth::id(),
+                'user_id' => Auth::id(),
                 'cart' => serialize(Session::get('cart')),
                 'amount' => $aymanCharge->amount,
                 'receipt_url' => $aymanCharge->receipt_url,

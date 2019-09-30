@@ -1,8 +1,8 @@
-
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top mb-5">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            <img src="{{asset('img/logo.png')}}" alt="logo" class="navbar-brand" width="60px">
+            {{ config('app.name', 'SSSoping') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -28,16 +28,15 @@
                         |
                         <span class="badge badge-pill badge-success text-white">
                          @if (Session::has('cart') && ! empty(Session::get('cart')))
-                             {{Session::get('cart')['total']}} $
-                             @else
-                             {{"0.0 $"}}
+                                {{Session::get('cart')['total']}} $
+                            @else
+                                {{"0.0 $"}}
 
-                         @endif
+                            @endif
 
-                         {{-- {{ Session::has('cart') ? Session::get('cart')['total'] : "0.0 $"}}--}}
+                            {{-- {{ Session::has('cart') ? Session::get('cart')['total'] : "0.0 $"}}--}}
                        </span>
                     </a>
-
 
 
                 </li>
@@ -90,6 +89,10 @@
 
                             <a class="dropdown-item" href="/home">
                                 {{ __('dashboard') }}
+                            </a>
+
+                            <a class="dropdown-item" href="/get-user-orders">
+                                {{ __('getUserOrders') }}
                             </a>
 
 

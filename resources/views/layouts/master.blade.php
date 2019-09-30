@@ -19,9 +19,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/spacelab/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .fix-top-margin-with-nav {
+            padding-top: 70px !important;
+
+        }
+
+    </style>
     @yield('style')
 </head>
-<body>
+<body class="fix-top-margin-with-nav">
 
 @include('partials._mainnav')
 <!-- Page Content -->
