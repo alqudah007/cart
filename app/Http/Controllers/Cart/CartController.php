@@ -16,7 +16,18 @@ class CartController extends Controller
 
     public function __construct()
     {
-       $this->middleware('auth')->only(['checkout','pay']);
+        $this->middleware('auth')->only(['checkout', 'pay']);
+        # strip shared user needed since the strip read that useremail is not match with strip test
+        # https://stripe.com/docs/connect/shared-customers
+
+        /*
+           You created that customer with your 1st test key. These customers will be invisible (as well as any cards,
+           subscriptions, etc) to your second test key.  Once you changed / moved key
+          you'll need to recreate these test customers, they are not shared between test keys and accounts.
+
+        */
+
+
     }
 
     public function index()
@@ -125,7 +136,7 @@ class CartController extends Controller
     public function pay(Request $request)
     {
 
-       // dd(Session::get('cart'));
+        // dd(Session::get('cart'));
         # 2 ways for charge !!
         # THIS METHOD  CALLED https://stripe.com/docs/api/charges/create
         # this method used by german video and all other videos on the net for direct check out !
@@ -148,8 +159,8 @@ class CartController extends Controller
                 'customer' => \auth::id(),
                 'metadata' => [
                     'namezzzzz' => 'z3moootzzzzz',
-                    'type' =>'XXlarg - mazarati',
-                    'address' =>$request->address,
+                    'type' => 'XXlarg - mazarati',
+                    'address' => $request->address,
 
                 ],
 
@@ -160,13 +171,13 @@ class CartController extends Controller
             Session::flash('receipt_url', $aymanCharge->receipt_url);
             Session::put('aymanCharge', $aymanCharge);
 
-           // $orderObj=new Order();
-           Order::Create([
-                'user_id'=>auth::id(),
-                'cart' => serialize( Session::get('cart')),
-                'amount' =>$aymanCharge->amount,
-                'receipt_url' =>$aymanCharge->receipt_url,
-                'strip_charge_id' =>$aymanCharge->id,
+            // $orderObj=new Order();
+            Order::Create([
+                'user_id' => auth::id(),
+                'cart' => serialize(Session::get('cart')),
+                'amount' => $aymanCharge->amount,
+                'receipt_url' => $aymanCharge->receipt_url,
+                'strip_charge_id' => $aymanCharge->id,
 
             ]);
 
