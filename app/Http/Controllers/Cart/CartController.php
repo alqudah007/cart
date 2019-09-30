@@ -126,6 +126,7 @@ class CartController extends Controller
         try {
 
             $AMOUNT_in_cent = \Session::get('cart')['total'];
+            // $aymanCharge contains the response data return form Stripe
             $aymanCharge = \Stripe\Charge::create([
                 'source' => $request->stripeToken,
                 'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
