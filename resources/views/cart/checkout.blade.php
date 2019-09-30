@@ -6,6 +6,7 @@
     <script src="https://js.stripe.com/v3/"></script>
     <script>
 
+        // TODO: Check if the item is still in my Inventory or no before charge user for it
 
         // Create a Stripe client.
         var stripe = Stripe('pk_test_bMY93xZv20b0eNTbjpzd3QO0005NewKX7b');
@@ -254,7 +255,7 @@
                                     <!-- Used to display form errors. -->
                                     <div id="card-errors" role="alert"></div>
                                 </div>
-
+                                // TODO: Check if the item is still in my Inventory or no
                                 <button class="btn btn-lg btn-success">Submit Payment to strip {\{cart.pay}\}</button>
                             </form>
 
