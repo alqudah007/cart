@@ -15,8 +15,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $obj =new Order();
-        return view('order.index',['orders'=>$obj->getUserOrders()]);
+        $Orderobj =new Order();
+
+
+        return view('order.index',['orders'=>$Orderobj->getUserOrders()]);
 
     }
 

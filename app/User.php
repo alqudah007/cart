@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    # the relationship for orders
+    public function orders(){
+        $this->hasMany('App\Backend\Order');
+    }
 }

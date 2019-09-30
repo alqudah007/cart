@@ -4,6 +4,7 @@ namespace App\Backend;
 
 use function foo\func;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Order extends Model
 {
@@ -11,10 +12,22 @@ class Order extends Model
     protected $fillable = ['user_id', 'cart', 'strip_charge_id', 'amount', 'receipt_url']; // note I dont make user_id fallible here!
 
 
+
+
+    # the relationship with Order
+    public function user(){
+
+        $this->belongsTo('App\User');
+    }
+
+
+
+
     public function getUserOrders()
     {
-
-        $orders = Order::all();
+        // The user orders relationship
+        $orders = Auth::user()->orders();
+        //$orders = Order::all();
 
         $orders->transform(function ($order, $key) {
             $order->cart = unserialize($order->cart);
