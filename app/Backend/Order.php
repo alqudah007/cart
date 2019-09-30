@@ -13,20 +13,17 @@ class Order extends Model
 
 
 
-
     # the relationship with Order
     public function user(){
-
-        $this->belongsTo('App\User');
+       return $this->belongsTo('App\User');
     }
-
-
 
 
     public function getUserOrders()
     {
         // The user orders relationship
-        $orders = Auth::user()->orders();
+        $orders = Auth::user()->orders; // we call the relation as probability not like function
+         //dd($orders);
         //$orders = Order::all();
 
         $orders->transform(function ($order, $key) {
@@ -34,7 +31,15 @@ class Order extends Model
             return $order;
         });
 
-        dd($orders);
+
+        return $orders;
+
+
+    }
+
+
+
+    public function deserializeCart($orderCollection){
 
     }
 

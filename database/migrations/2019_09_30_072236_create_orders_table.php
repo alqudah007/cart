@@ -21,6 +21,11 @@ class CreateOrdersTable extends Migration
             $table->text('amount');
             $table->string('receipt_url')->comment('return from strip charge, invoice link pdf');
             $table->timestamps();
+
+
+            //  THIS IS IMOPRTSNT TO KEEP DATA INTEGRATED  IN CASE OF DELETION
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 

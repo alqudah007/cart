@@ -16,8 +16,6 @@ class OrderController extends Controller
     public function index()
     {
         $Orderobj =new Order();
-
-
         return view('order.index',['orders'=>$Orderobj->getUserOrders()]);
 
     }

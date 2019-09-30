@@ -40,6 +40,7 @@ class User extends Authenticatable
 
     # the relationship for orders
     public function orders(){
-        $this->hasMany('App\Backend\Order');
+      return  $this->hasMany('App\Backend\Order');
+
     }
 }
