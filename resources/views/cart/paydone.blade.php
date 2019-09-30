@@ -49,16 +49,18 @@
                         <div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                     aria-hidden="true">&times;</span></button>
-                            <strong>ERROR ! Contact AYMANAN@AYMAN[dot]come</strong>
+                            <strong>ERROR !</strong>
                             <div>
 
-                               @if (count($errors) > 0 ) {{--// $errors->any() --}}
-                                   @foreach ($errors as $error)
-                                      ERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRROR:::::::
-                                        {{$error}}
-                                   @endforeach
+                                Strip Error log: <strong>{{Session::get('pay-faild')}}</strong>
 
-                               @endif
+                                {{-- @if (count($errors) > 0 ) --}}{{--// $errors->any() --}}{{--
+                                     @foreach ($errors as $error)
+                                        ERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRROR:::::::
+                                          {{$error}}
+                                     @endforeach
+
+                                 @endif--}}
                             </div>
 
                         </div>
@@ -71,10 +73,13 @@
                         <div class="col-md-12 border border-danger bg-light">
                             PAY DashBoard
 
-                            <div> Amount : ${{ \Session::has('aymanCharge') ? \Session::get('aymanCharge')->amount :""}}</div>
-                            <div> description : ${{ \Session::has('aymanCharge') ?  \Session::get('aymanCharge')->description : ""}}</div>
+                            <div> Amount :
+                                ${{ \Session::has('aymanCharge') ? \Session::get('aymanCharge')->amount :""}}</div>
+                            <div> description :
+                                ${{ \Session::has('aymanCharge') ?  \Session::get('aymanCharge')->description : ""}}</div>
                             <div>
-                                <a class="btn btn-outline-danger" href=" {{ \Session::has('aymanCharge') ?  \Session::get('aymanCharge')->receipt_url  :""}}">
+                                <a class="btn btn-outline-danger"
+                                   href=" {{ \Session::has('aymanCharge') ?  \Session::get('aymanCharge')->receipt_url  :""}}">
                                     Click to see the money gone form you</a>
 
                             </div>

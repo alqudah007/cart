@@ -2,15 +2,22 @@
 
 namespace App\Http\Controllers\Cart;
 
+use App\Backend\Order;
 use App\Backend\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 
 class CartController extends Controller
 {
     //
+
+    public function __construct()
+    {
+       $this->middleware('auth')->only(['checkout','pay']);
+    }
 
     public function index()
     {
@@ -117,6 +124,8 @@ class CartController extends Controller
     // prepare how much we need to charge Him
     public function pay(Request $request)
     {
+
+       // dd(Session::get('cart'));
         # 2 ways for charge !!
         # THIS METHOD  CALLED https://stripe.com/docs/api/charges/create
         # this method used by german video and all other videos on the net for direct check out !
@@ -125,8 +134,10 @@ class CartController extends Controller
         \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip
         try {
 
+            # Need to refactor this (amount )
             $AMOUNT_in_cent = \Session::get('cart')['total'];
-            // $aymanCharge contains the response data return form Stripe
+
+            # $aymanCharge contains the response data return form Stripe
             $aymanCharge = \Stripe\Charge::create([
                 'source' => $request->stripeToken,
                 'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
@@ -148,14 +159,25 @@ class CartController extends Controller
             Session::flash('pay-done', '$$$$$$$$$ PayDOneBRO $$$$$$$$ ');
             Session::flash('receipt_url', $aymanCharge->receipt_url);
             Session::put('aymanCharge', $aymanCharge);
+
+           // $orderObj=new Order();
+           Order::Create([
+                'user_id'=>auth::id(),
+                'cart' => serialize( Session::get('cart')),
+                'amount' =>$aymanCharge->amount,
+                'receipt_url' =>$aymanCharge->receipt_url,
+                'strip_charge_id' =>$aymanCharge->id,
+
+            ]);
+
             Session::forget('cart');
-            //($aymanCharge); // this contian all the charge details
+            //dd($aymanCharge); // this contian all the charge details
             return response()->redirectToRoute('cart.paydone');
 
         } catch (\Exception $e) {
-            Session::flash('pay-faild', 'pay-faild pay-faild pay-faild ');
-            dd($e->getMessage()); // "Invalid API Key provided: #sk_test*******************************eIxd"
-            return response()->redirectToRoute('cart.paydone')->withErrors('error',$e->getMessage());
+            Session::flash('pay-faild', $e->getMessage());
+            //dd($e->getMessage()); // "Invalid API Key provided: #sk_test*******************************eIxd"
+            return response()->redirectToRoute('cart.paydone')->withErrors($e->getMessage());
         }
 
 

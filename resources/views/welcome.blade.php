@@ -6,18 +6,7 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
         @php
-            $cartName='cart_'.Session::getId();// Do i need to rename the cart  ? no the session always has its own id for each user who use the session
-           // 'cart2_'.\Session::getId() = array(); Error
-           //'cart2_'.\Session::getId()= []; ErrorError
-            $cartName=[];
-            $cartName['A']='CCCCC';// way 1
-            //$cartName=['B' =>'DDD'];// waY 2 - overwrite the WHOLE array !!
-            //Session::put($cartName); // this must be associated arrray . Dont forget that the SESSION is assosiated array at the end of the day!
 
-
-
-
-            //dd($cartName);
         @endphp
         <h2 class="text-muted text-danger text-break">session::getId() {{Session::getId()}}</h2>
         <h2 class="text-muted text-success text-break">{{--cart: {{ Session::get($cartName)}}--}}</h2>
