@@ -35,7 +35,7 @@
         .footer{
             position:absolute;
             bottom:0;
-            width:100%;
+
             height:60px;   /* Height of the footer */
             background:#6cf;
         }
@@ -60,11 +60,11 @@
     <!-- /.container -->
 </footer>
 
-<div  class=" bg-danger text-white-50 footer">
+<footer  class=" bg-danger text-white-50 footer">
     <div class="container text-center">
         <small>Copyright &copy; Your Website</small>
     </div>
-</div>
+</footer>
 
 
 

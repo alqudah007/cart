@@ -2,31 +2,57 @@
 @section('title')
     AYMAN TITLE
 @stop
+@section('style')
+    <style>
+        .jumbotron {
+            background-image: url("{{asset('img/bg.png')}}");
+            background-size: contain;
+        }
+    </style>
+
+
+@stop
 @section('content')
     <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
-       {{-- @php
-            $cartName='cart_'.Session::getId();// Do i need to rename the cart  ? no the session always has its own id for each user who use the session
-           // 'cart2_'.\Session::getId() = array(); Error
-           //'cart2_'.\Session::getId()= []; ErrorError
-            $cartName=[];
-            $cartName['A']='CCCCC';// way 1
-            //$cartName=['B' =>'DDD'];// waY 2 - overwrite the WHOLE array !!
-            //Session::put($cartName); // this must be associated arrray . Dont forget that the SESSION is assosiated array at the end of the day!
+    <header class="jumbotron my-4 shadow-lg">
+        <div class="row">
+            <div class="col-4 col-sm-4">
+                <img src="{{asset('img/logo.png')}}" alt="logo" class="navbar-brand " width="200px">
+            </div>
+            <div class="col-8">
+                {{-- @php
+           $cartName='cart_'.Session::getId();// Do i need to rename the cart  ? no the session always has its own id for each user who use the session
+          // 'cart2_'.\Session::getId() = array(); Error
+          //'cart2_'.\Session::getId()= []; ErrorError
+           $cartName=[];
+           $cartName['A']='CCCCC';// way 1
+           //$cartName=['B' =>'DDD'];// waY 2 - overwrite the WHOLE array !!
+           //Session::put($cartName); // this must be associated arrray . Dont forget that the SESSION is assosiated array at the end of the day!
 
 
 
 
-            //dd($cartName);
-        @endphp--}}
-        <h2 class="text-muted text-danger text-break">session::getId() {{Session::getId()}}</h2>
-        <h2 class="text-muted text-success text-break">{{--cart: {{ Session::get($cartName)}}--}}</h2>
+           //dd($cartName);
+       @endphp--}}
+                <h2 class="text-muted text-danger text-break">
+                    BIG DEAL LARAVEL 6 COURSES
+                    {{--session::getId() {{Session::getId()}}--}}
+                </h2>
+                <p>
+                    BIG DEAL LARAVEL 6 COURSES  BIG DEAL LARAVEL 6 COURSES BIG DEAL LARAVEL 6 COURSES
+                    BIG DEAL LARAVEL 6 COURSES  BIG DEAL LARAVEL 6 COURSES BIG DEAL LARAVEL 6 COURSES
+                </p>
+                <h2 class="text-muted text-success text-break">
+                    <a href="#" class="btn btn-primary btn-lg">BUY NOW !</a>
+                </h2>
+            </div>
+        </div>
 
-        <p class="lead">{{Session::get('Id','Defaullt Variable')}}
 
-        </p>
-        <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
-       {{-- <img class="card-img-top" src="http://placehold.it/500x325" alt="">--}}
+
+
+
+
     </header>
 
     <!-- Page Features -->
