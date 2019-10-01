@@ -93,6 +93,19 @@ class CartController extends Controller
     }
 
 
+    public function getTotalFromCart(){
+        $temptotal=0;
+       if( Session::has('cart') && !empty(Session::has('cart'))){
+
+           foreach (){
+
+           }
+
+       }
+
+    }
+
+
     // dump session cart
     public function dumpsessioncart()
     {
