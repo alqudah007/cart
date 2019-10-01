@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    AYMAN TITLE
+    Elearning Shop for Laravel 6
 @stop
 @section('style')
     <style>
