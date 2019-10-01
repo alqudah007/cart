@@ -59,13 +59,6 @@
     <!-- /.row -->
 
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy;{{now()}} Your Website {{now()->format('Y')}}</p>
-        </div>
-        <!-- /.container -->
-    </footer>
 
 
 @stop

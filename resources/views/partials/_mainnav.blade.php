@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top mb-5">
+<nav class="navbar navbar-expand-md navbar-light  bg-light shadow-sm fixed-top mb-5">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{asset('img/logo.png')}}" alt="logo" class="navbar-brand" width="60px">
-            {{ config('app.name', 'SSSoping') }}
+            <img src="{{asset('img/logo.png')}}" alt="logo" class="navbar-brand" width="110px">
+           {{-- {{ config('app.name', 'SSSoping') }}--}}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

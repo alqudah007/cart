@@ -106,8 +106,8 @@ class CartController extends Controller
     {
         // Session::flush(); // this delete all session data !!
 
-        //session::forget('cart'); // Better ( official ) OK
-        session::pull('cart');// ALso pull from array of session OK
+        session::forget('cart'); // Better ( official ) OK
+       // session::pull('cart');// ALso pull from array of session OK
 
         return 'Done';
 
