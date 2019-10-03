@@ -43,7 +43,7 @@
                     BIG DEAL LARAVEL 6 COURSES  BIG DEAL LARAVEL 6 COURSES BIG DEAL LARAVEL 6 COURSES
                 </p>
                 <h2 class="text-muted text-success text-break">
-                    <a href="#" class="btn btn-primary btn-lg">BUY NOW !</a>
+                    <a href="#" class="btn btn-primary btn-block btn-lg">BUY NOW !</a>
                 </h2>
             </div>
         </div>

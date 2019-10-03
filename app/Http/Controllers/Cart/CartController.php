@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use phpDocumentor\Reflection\DocBlock\Serializer;
 
 
 class CartController extends Controller
@@ -39,7 +40,7 @@ class CartController extends Controller
          dump($isCartExists); // true
          dd(Session::has('cart')); // true but it may be empty bro !*/
         $currentCart = null;
-        $currentTotal = Session::has('cart') ? Session::get('cart')['total'] : 0;
+       // $currentTotal = Session::has('cart') ? Session::get('cart')['total'] : 0;
 
         /*dump('Session::has(\'cart\')');
         dump(Session::has('cart'));
@@ -56,7 +57,7 @@ class CartController extends Controller
                 // update the quantity of the existance
                 $currentCart[$product->id]['quantity']++;
 
-                $currentTotal += (float)$product->price;
+              //  $currentTotal += (float)$product->price;
 
             } else {
                 //  add the new item to the cart
@@ -67,7 +68,7 @@ class CartController extends Controller
                 ];
 
 
-                $currentTotal += (float)$product->price;
+                //$currentTotal += (float)$product->price;
 
             }
         } else {
@@ -81,27 +82,33 @@ class CartController extends Controller
             ];
 
 
-            $currentTotal += (float)$product->price;
+            //$currentTotal += (float)$product->price;
 
         }
 
-        $currentCart['total'] = $currentTotal;
+        //$currentCart['total'] = $currentTotal;
         Session::put('cart', $currentCart);
+        Session::put('total', $this->getTotalFromCart());
+
+
         return back();
 
 
     }
 
 
-    public function getTotalFromCart(){
-        $temptotal=0;
-       if( Session::has('cart') && !empty(Session::has('cart'))){
+    public function getTotalFromCart()
+    {
+        $temptotal = 0;
+        if (Session::has('cart') && !empty(Session::has('cart'))) {
 
-           foreach (){
+            foreach (Session::get('cart') as $cartItem) {
+                $temptotal += $cartItem['quantity'] * $cartItem['price'];
+            }
 
-           }
 
-       }
+        }
+        return $temptotal;
 
     }
 
@@ -120,7 +127,8 @@ class CartController extends Controller
         // Session::flush(); // this delete all session data !!
 
         session::forget('cart'); // Better ( official ) OK
-       // session::pull('cart');// ALso pull from array of session OK
+        session::forget('total'); //
+        // session::pull('cart');// ALso pull from array of session OK
 
         return 'Done';
 
@@ -147,13 +155,13 @@ class CartController extends Controller
         \Stripe\Stripe::setApiKey('sk_test_KK52J2XjGmgUmE5K4rkfU4rH00C82BeIxd'); # public key from strip
         try {
 
-            # Need to refactor this (amount )
-            $AMOUNT_in_cent = \Session::get('cart')['total'];
+            #
+            $AMOUNT_in_cent = Session::get('total');
 
             # $aymanCharge contains the response data return form Stripe
             $aymanCharge = \Stripe\Charge::create([
                 'source' => $request->stripeToken,
-                'description' => 'description------AYMAN - Cart - Hope-pppppppppppp',
+                'description' => 'This is my decription for this transaction ::::'.serialize(Session::get('cart')),
                 'amount' => $AMOUNT_in_cent * 100,//convert cent to dollar
                 'currency' => 'usd',
                 // ayman add these based on the documentation stripe

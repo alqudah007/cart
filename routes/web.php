@@ -32,3 +32,12 @@ Route::post('/cart-pay', 'Cart\CartController@pay')->name('cart.pay');// send to
 Route::get('/pay-done', 'Cart\CartController@paydone')->name('cart.paydone');// cart.paydone
 
 Route::get('/get-user-orders', 'Order\OrderController@index')->name('order.index');// get user orders
+
+/*
+|--------------------------------------------------------------------------
+| Product
+|--------------------------------------------------------------------------
+|
+|
+*/
+Route::get('/product', 'Product\ProductController@getRandomProducts');
