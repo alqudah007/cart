@@ -40,4 +40,4 @@ Route::get('/get-user-orders', 'Order\OrderController@index')->name('order.index
 |
 |
 */
-Route::get('/product', 'Product\ProductController@getRandomProducts');
+Route::get('/product-related', 'Product\ProductController@getRandomProducts');

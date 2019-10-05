@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cosmo/bootstrap.min.css" rel="stylesheet">
 
 
     <style>
@@ -34,15 +34,15 @@
 
 @include('partials._mainnav')
 <!-- Page Content -->
-<div class="container mt-5">
+<div class="container mt-5 mb-4">
     @yield('content','main Content Not found!')
     @yield('script')
 </div>
 
 
-<footer class=" bg-danger text-white-50 d-flex justify-content-center mt-auto">
+<footer class=" bg-danger text-white-50 d-flex justify-content-center mt-auto ">
     <div class="container text-center ">
-        <small>Shope &copy; {{now()->format('Y')}}</small>
+        <small>{{config('app.name')}} &copy; {{now()->format('Y')}}</small>
     </div>
 </footer>
 

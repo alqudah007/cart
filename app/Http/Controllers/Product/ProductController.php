@@ -13,18 +13,12 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return view('frontend.index', ['products' => $products]);
+          // $randomRelatedProducts=$this->getRandomProducts($products);
+        $randProducts=$products->random(6);
+        return view('frontend.index', ['products' => $products,'randomproducts' =>$randProducts]);
     }
 
 
 
-    public function getRandomProducts(){
 
-        $products=Product::all()->chunk(3); // chunk spilt the collect to 3 - 3- 3 but not random
-
-        foreach($products as $pro){
-            dump('=========');
-            dump($pro);
-        }
-    }
 }
