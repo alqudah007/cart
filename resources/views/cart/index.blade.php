@@ -13,7 +13,7 @@
             <tr>
                 <th style="width:1%">#</th>
                 <th style="width:49%">Product</th>
-                <th style="width:10%">Price</th>
+                <th style="width:10%">Price 🤑 </th>
                 <th style="width:8%">Quantity</th>
                 <th style="width:22%" class="text-center">Subtotal</th>
                 <th style="width:10%">action</th>
@@ -30,8 +30,8 @@
                                     <img src="img/{{$CartIndexValue['product']['image_path']}}" width="100px" alt="..." class="img-responsive"/>
                                 </div>
                                 <div class="col-sm-9">
-                                    <h4 class="nomargin">{{$CartIndexValue['product']['brand']}}</h4>
-                                    <h4 class="nomargin">{{$CartIndexValue['product']['name']}}</h4>
+                                    <h4 class="nomargin">{{strtoupper($CartIndexValue['product']['brand'])}}</h4>
+                                    <h4 class="nomargin">{{strtoupper($CartIndexValue['product']['name'])}}</h4>
                                     <p class="text-wrap text-break">
                                         {{\Str::limit($CartIndexValue['product']['description'],100)}}
                                     </p>
@@ -47,8 +47,8 @@
                         <td data-th="Subtotal"
                             class="text-center">{{$CartIndexValue['quantity']*$CartIndexValue['price'] }}</td>
                         <td class="actions" data-th="">
-                            <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i>Update</button>
-                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>Delete</button>
+                            <button class="btn btn-info btn-sm w-100"><i class="fa fa-refresh"></i>Update</button>
+                            <button class="btn btn-danger btn-sm w-100"><i class="fa fa-trash-o"></i>Delete</button>
                         </td>
                     </tr>
                 @endforeach
@@ -83,7 +83,7 @@
                         @endif
                     </strong>
                 </td>
-                <td><a href="{{route('cart.checkout')}}" class="btn btn-success btn-block">Checkout <i
+                <td><a href="{{route('cart.checkout')}}" class="btn btn-danger btn-block">Checkout <i
                             class="fa fa-angle-right"></i></a></td>
             </tr>
             </tfoot>

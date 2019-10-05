@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light  bg-light shadow-sm fixed-top mb-5">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{asset('img/logo.png')}}" alt="logo" class="navbar-brand" width="110px">
+            <img src="{{asset('img/logo.png')}}" alt="logo" class="navbar-brand" width="50px">
            {{-- {{ config('app.name', 'SSSoping') }}--}}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

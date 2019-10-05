@@ -57,14 +57,14 @@
             // Collect more data from user to use in after charge ( order )
             var options = {
                 name: document.getElementById('card-holdername').value,
-                address_country:document.getElementById('address').value,
-                address_line1:document.getElementById('address').value,
+                address_country: document.getElementById('address').value,
+                address_line1: document.getElementById('address').value,
             };
             // End Ayman add more options here to the form   Stripe.js reference
             // CHANGE THE FOLOWING LINE TO ADD OPTIONS
             //  stripe.createToken(card).then <---- ORIGINAL
 
-            stripe.createToken(card,options).then(function (result) {
+            stripe.createToken(card, options).then(function (result) {
                 if (result.error) {
                     // Inform the user if there was an error.
                     var errorElement = document.getElementById('card-errors');
@@ -89,7 +89,6 @@
             // Submit the form
             form.submit();
         }
-
 
 
     </script>
@@ -135,119 +134,55 @@
 
     <div class="container m-5">
 
-        <div class="card card-header  mt-5">
+        <div class="card   mt-5">
             <div class="card">
                 <div class="card-header">
-                    Use this to start Strip checout
+                    <h3> Use this to start Strip Check Out 💲</h3>
                 </div>
                 <div class="card-body">
-                    <div>
-                        <ol>
-                            <li>https://stripe.com/docs/payments</li>
-                            <li>https://stripe.com/docs/stripe-js</li>
-                        </ol>
-
-                        <div>
-                            4242 4242 4242 4242
-                        </div>
-                    </div>
-
-
-                    {{--form a--}}
-                    {{--  <div class="row  ">
-                          <div class="card ">
-                              <div class="card-body mt-5">
-                                  <form accept-charset="UTF-8" action="/" class="require-validation"
-                                        data-cc-on-file="false"
-                                        data-stripe-publishable-key="test_public_key"
-                                        id="payment-form" method="post">
-                                      {{ csrf_field() }}
-                                      <div class='form-row'>
-                                          <div class='col-xs-12 form-group required'>
-                                              <label class='control-label'>Name on Card</label> <input
-                                                  class='form-control' size='4' type='text'>
-                                          </div>
-                                      </div>
-                                      <div class='form-row'>
-                                          <div class='col-xs-12 form-group card required'>
-                                              <label class='control-label'>Card Number</label> <input
-                                                  autocomplete='off' class='form-control card-number' size='20'
-                                                  type='text'>
-                                          </div>
-                                      </div>
-                                      <div class='form-row'>
-                                          <div class='col-xs-4 form-group cvc required'>
-                                              <label class='control-label'>CVC</label> <input autocomplete='off'
-                                                                                              class='form-control card-cvc'
-                                                                                              placeholder='ex. 311'
-                                                                                              size='4'
-                                                                                              type='text'>
-                                          </div>
-                                          <div class='col-xs-4 form-group expiration required'>
-                                              <label class='control-label'>Expiration</label> <input
-                                                  class='form-control card-expiry-month' placeholder='MM' size='2'
-                                                  type='text'>
-                                          </div>
-                                          <div class='col-xs-4 form-group expiration required'>
-                                              <label class='control-label'> </label> <input
-                                                  class='form-control card-expiry-year' placeholder='YYYY' size='4'
-                                                  type='text'>
-                                          </div>
-                                      </div>
-                                      <div class='form-row'>
-                                          <div class='col-md-12'>
-                                              <div class='form-control total btn btn-info'>
-                                                  Total: <span class='amount'>$300</span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class='form-row'>
-                                          <div class='col-md-12 form-group'>
-                                              <button class='form-control btn btn-primary submit-button'
-                                                      type='submit' style="margin-top: 10px;">Pay »
-                                              </button>
-                                          </div>
-                                      </div>
-                                      <div class='form-row'>
-                                          <div class='col-md-12 error form-group hide'>
-                                              <div class='alert-danger alert'>Please correct the errors and try
-                                                  again.
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </form>
-
-                              </div>
-                          </div>
-
-                      </div>--}}
 
                     {{--form B--}}
-                    <div class="row">
-                        <div class="col-md-12 border border-danger bg-light">
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ol>
+                                <li>https://stripe.com/docs/payments</li>
+                                <li>https://stripe.com/docs/stripe-js</li>
+                                <li>
+                                    <div>
+                                        4242 4242 4242 4242
+                                    </div>
+                                </li>
+                                <li> // TODO: Check if the item is still in my Inventory or no</li>
+                            </ol>
+                        </div>
+
+
+                        <div class="col-md-6 ">
                             <form action="{{route('cart.pay')}}" method="post" id="payment-form">
                                 @csrf
-                                <div class="form-row">
+                                <div class="form-row ">
                                     <label for="card-holdername">
-                                        card-holdername
+                                       <strong>Card Holder Name </strong>
                                     </label>
-                                    <input class="form-control" type="text" id="card-holdername" name="card-holdername" placeholder="card holder name">
+                                    <input class="form-control" type="text" id="card-holdername" name="card-holdername"
+                                           placeholder="card holder name">
 
                                 </div>
-                                <div class="form-row">
+                                <div class="form-row mt-3">
                                     <label for="address">
-                                        address
+                                        <strong> Address </strong>
                                     </label>
-                                    <input class="form-control" type="text" id="address" name="address" placeholder="address">
+                                    <input class="form-control" type="text" id="address" name="address"
+                                           placeholder="address">
 
                                 </div>
 
 
-                                <div class="form-row">
+                                <div class="form-row mt-3">
                                     <label for="card-element">
-                                        Credit or debit card
+                                        <strong>  Credit or debit card </strong>
                                     </label>
-                                    <div id="card-element" class="border border-warning" style="width: 100%">
+                                    <div id="card-element" class="border " style="width: 100%">
                                         <!-- A Stripe Element will be inserted here. -->
 
                                     </div>
@@ -255,9 +190,15 @@
                                     <!-- Used to display form errors. -->
                                     <div id="card-errors" role="alert"></div>
                                 </div>
-                                // TODO: Check if the item is still in my Inventory or no
-                                <button class="btn btn-lg btn-success">Submit Payment to strip {\{cart.pay}\}</button>
+                                <div class="form-row mt-3">
+                                    <button class="btn btn-lg btn-outline-danger "> 💰 💰 💰  Submit Payment to strip {\{cart.pay}\}
+                                    </button>
+
+                                </div>
+
+
                             </form>
+
 
                         </div>
                     </div>
