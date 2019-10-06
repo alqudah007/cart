@@ -41,3 +41,17 @@ Route::get('/get-user-orders', 'Order\OrderController@index')->name('order.index
 |
 */
 Route::get('/product-related', 'Product\ProductController@getRandomProducts');
+
+
+/*
+|--------------------------------------------------------------------------
+| Paypal Integration
+|--------------------------------------------------------------------------
+|
+|
+*/
+
+Route::get('/paypal', function () {
+    return view('cart.paypal-checkout');
+});
+

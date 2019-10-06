@@ -44,6 +44,7 @@
     <div class="container text-center ">
         <small>{{config('app.name')}} &copy; {{now()->format('Y')}}</small>
     </div>
+
 </footer>
 
 
