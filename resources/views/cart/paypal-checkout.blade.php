@@ -58,20 +58,32 @@
             paypal.Buttons({
                 createOrder: function(data, actions) {
                     return actions.order.create({
+                       //Ayamn add these
+                        redirect_urls: {
+                            return_url: 'https://example.com',
+                            cancel_url: 'https://example.com'
+                        },
+                        //Ayamn add these ^^^^^
                         purchase_units: [{
                             amount: {
                                 value: '100.01',
                                 currency:'USD'
                             }
                         }]
+
+
                     });
                 },
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name);
 
-                        // Call your server to save the transaction
-                        return fetch('/paypal-transaction-complete', {
+                onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name);
+                        console.log(data)    ;
+                        console.log(details)    ;
+                       /* return actions.redirect_urls({return_url:'http://xx444xx.com'}) ;*/
+
+                        //AYMAN::::: Call your server to save the transaction
+                        return fetch('/paypal-done-payment', {
                             method: 'post',
                             headers: {
                                 'content-type': 'application/json'
@@ -81,7 +93,16 @@
                             })
                         });
                     });
+                },
+                onAuthorize: function (data, actions) {
+                    // Execute the payment here, when the buyer approves the transaction
+                    console.log("AAAAAAAAAAAAAAa");
+                },
+                onCancel: function (data, actions) {
+                    // Show a cancel page or return to cart
+                    console.log("BBBBBBBBBBBBB");
                 }
+
             }).render('#paypal-button-container2');
         </script>
 

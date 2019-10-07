@@ -54,4 +54,8 @@ Route::get('/product-related', 'Product\ProductController@getRandomProducts');
 Route::get('/paypal', function () {
     return view('cart.paypal-checkout');
 });
+Route::get('/paypal-done-payment', function () {
+    console.log('xxxxxxxxxxxxxxxxxxxxx');
+    dd('cccc');
+});
 
