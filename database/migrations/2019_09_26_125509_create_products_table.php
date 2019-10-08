@@ -18,6 +18,8 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('brand');
             $table->float('price');
+            $table->float('color');
+            $table->integer('instock');
             $table->text('description');
             $table->string('image_name')->default('product_image.jpg');
             $table->timestamps();

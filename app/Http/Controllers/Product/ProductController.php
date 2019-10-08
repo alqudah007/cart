@@ -14,7 +14,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
           // $randomRelatedProducts=$this->getRandomProducts($products);
-        $randProducts=$products->random(6);
+        $randProducts=$products->random(6); // How to send random products
         return view('frontend.index', ['products' => $products,'randomproducts' =>$randProducts]);
     }
 
