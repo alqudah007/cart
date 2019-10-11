@@ -61,7 +61,7 @@
                         <div class='carousel-item text-center {{ $loop->iteration == 1 ? 'active' : '' }}'>
                             <div class="row">
                                 <div class="col-4">
-                                    <img class="w-50" src='{{asset("/img/$randomproduct->image_path")}}' alt="">
+                                    <img class="w-50" src='{{asset("/img/$randomproduct->image_name")}}' alt="">
 
                                 </div>
                                 <div class="col-3">
@@ -98,7 +98,7 @@
 
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card h-100">
-                    <img class="card-img-top h-25" src='{{asset("/img/$product->image_path")}}' alt="">
+                    <img class="card-img-top h-25" src='{{asset("/img/$product->image_name")}}' alt="">
                     <div class="card-header letter">{{strtoupper($product->brand)}}</div>
                     <div class="card-body">
                         <h4 class="card-title">{{strtoupper($product->name)}}</h4>
@@ -132,7 +132,7 @@
                 <div class="col-2 align-items-stretch">
                     <div class="card border ">
                         <div class="card-body">
-                            <img class="card-img-bottom " src='{{asset("/img/$randomproduct->image_path")}}' alt="">
+                            <img class="card-img-bottom " src='{{asset("/img/$randomproduct->image_name")}}' alt="">
                             {{$randomproduct->brand}}
                             {{$randomproduct->name}}
                             {{$randomproduct->price}}

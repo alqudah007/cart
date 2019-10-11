@@ -23,7 +23,7 @@ class CreateProductsAttributesTable extends Migration
             $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
             // this is how we define the Primary key in Many-many
             // no  need to foreign key
-            $table->unique(['product_id','attribute_id']); // user_id = 1 quesion_is =1 this will not repeated
+            $table->unique(['product_id','attribute_id']); // user_id = 1 question_is =1 this will not repeated
 
 
         });

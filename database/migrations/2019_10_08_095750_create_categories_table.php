@@ -17,7 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description');
-            $table->integer('active')->comment('0 or 1');
+            $table->integer('active')->comment('0 or 1')->defualt(1);
             $table->timestamps();
 
         });
@@ -30,6 +30,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('cate');
     }
 }

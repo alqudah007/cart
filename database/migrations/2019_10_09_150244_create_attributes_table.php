@@ -15,6 +15,7 @@ class CreateAttributesTable extends Migration
     {
         Schema::create('attributes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('name')->comment('color,size,price');
             $table->timestamps();
         });
     }
