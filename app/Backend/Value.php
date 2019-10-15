@@ -13,11 +13,15 @@ class Value extends Model
     {
         return $this->belongsTo(Attribute::class);
     }
-    // Define  one value hasMany ProductAttribute 1 - *
-    public function productattribute()
+
+
+
+    // ENV there is relation between attr and value but in this table
+    public function productattributevalue()
     {
-        return $this->hasMany(ProductAttribute::class);
+        return $this->hasMany(Attribute::class,'products_attributes_values');
 
     }
+
 
 }

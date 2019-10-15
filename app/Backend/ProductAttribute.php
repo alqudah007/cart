@@ -14,4 +14,11 @@ class ProductAttribute extends Model
         return $this->belongsTo(Value::class);
     }
 
+    // Define  one value hasMany ProductAttribute 1 - *
+    public function productattributevalue()
+    {
+        return $this->hasMany(ProductAttribute::class,'products_attributes_values');
+
+    }
+
 }

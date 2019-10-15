@@ -31,13 +31,14 @@ class Product extends Model
         // note the 'user_id','question_id' are optionals
         //return $this->belongsToMany(Question::class,'favorites','user_id','question_id')->withTimestamps();
         //  favorites the data base table (
+        #return $this->belongsToMany(Attribute::class,'products__attributes')->withTimestamps();
         return $this->belongsToMany(Attribute::class,'products__attributes')->withTimestamps();
     }
 
-   /* // Relationship many to many
-    public function valuesofattribute()
+
+    public function product_to_attributevalue()
     {
         return $this->belongsToMany(Attribute::class,'products_attributes_values')->withTimestamps();
 
-    }*/
+    }
 }

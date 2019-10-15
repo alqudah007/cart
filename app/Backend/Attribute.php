@@ -13,6 +13,7 @@ class Attribute extends Model
         // note the 'user_id','question_id' are optionals
         //return $this->belongsToMany(Question::class,'favorites','user_id','question_id')->withTimestamps();
         //  favorites the data base table (
+        //return $this->belongsToMany(Product::class,'products__attributes')->withTimestamps();
         return $this->belongsToMany(Product::class,'products__attributes')->withTimestamps();
     }
 
@@ -22,6 +23,14 @@ class Attribute extends Model
     public function values()
     {
         return $this->hasMany(Value::class);
+    }
+
+
+    // ENV there is relation between attr and value but in this table
+    public function eav()
+    {
+        return $this->hasMany(Value::class,'products_attributes_values');
+
     }
 
 
