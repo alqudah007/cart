@@ -338,9 +338,6 @@
 
 
 
-
-
-
     <div id="gallery" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -411,5 +408,32 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+    </div>
+
+
+    <div class="container ">
+        <div class="row">
+            <div>
+                <ul>
+                    @foreach ($producteav as $product)
+
+                        <li> {{$product->name}}</li>
+                        <li>{{$product->price}}</li>
+                       {{-- {{dump($product->att->groupBy('att'))}}--}}
+                        @foreach($product->att->groupBy('att') as $key=>$value)
+                            <li class="">
+                                {{$key}} :
+
+                                @foreach ($value as $singlevalue)
+                                    <span class="bg-danger" >{{$singlevalue->val}}</span>
+                                @endforeach
+                            </li>
+                        @endforeach
+                        <hr>
+                    @endforeach
+
+                </ul>
+            </div>
+        </div>
     </div>
 @stop

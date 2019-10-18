@@ -17,6 +17,11 @@ class Attribute extends Model
         return $this->belongsToMany(Product::class,'products__attributes')->withTimestamps();
     }
 
+    //
+    public function aymans()
+    {
+        return $this->hasMany(Product::class,'aymans')->withTimestamps();
+    }
 
     //  define the relationship
     // * - 1 (many products belongs to 1 category )
@@ -29,7 +34,7 @@ class Attribute extends Model
     // ENV there is relation between attr and value but in this table
     public function eav()
     {
-        return $this->hasMany(Value::class,'products_attributes_values');
+        return $this->hasMany(Product::class,'products_attributes_values');
 
     }
 

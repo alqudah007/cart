@@ -36,7 +36,13 @@ class Product extends Model
     }
 
 
-    public function product_to_attributevalue()
+    // define many to many
+    public function att()
+    {
+        return $this->hasMany(Att::class);
+    }
+
+    public function eav()
     {
         return $this->belongsToMany(Attribute::class,'products_attributes_values')->withTimestamps();
 
