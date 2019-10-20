@@ -11,7 +11,7 @@ class CreateAymanTable extends Migration
      *
      * @return void
      */
-    public function ~up()
+    public function up()
     {
         Schema::create('aymans', function (Blueprint $table) {
             $table->bigIncrements('id');
