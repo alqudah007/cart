@@ -410,22 +410,38 @@
         </a>
     </div>
 
-
-    <div class="container ">
+    {{--eav row --}}
+    <div class="container border border-danger mt-4">
+        <div class="modal-header">this is the eav data </div>
         <div class="row">
+            <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Choose...</option>
+
+
+                        <option value="">y</option>
+
+
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+            </div>
             <div>
                 <ul>
                     @foreach ($producteav as $product)
 
+                        <li> {{$product->category->name}}</li>
                         <li> {{$product->name}}</li>
                         <li>{{$product->price}}</li>
                        {{-- {{dump($product->att->groupBy('att'))}}--}}
+                        <strong>Att</strong>
                         @foreach($product->att->groupBy('att') as $key=>$value)
-                            <li class="">
-                                {{$key}} :
+                            <li >
+                               <span class="btn btn-outline-primary">{{$key}} :</span>
 
                                 @foreach ($value as $singlevalue)
-                                    <span class="bg-danger" >{{$singlevalue->val}}</span>
+                                    <span class="badge badge-danger" >{{$singlevalue->val}}</span>
                                 @endforeach
                             </li>
                         @endforeach

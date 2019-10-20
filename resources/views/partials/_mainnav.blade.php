@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark  bg-dark shadow-sm fixed-top mb-5">
+<nav class="navbar navbar-expand-md navbar-dark  bg-primary shadow-sm fixed-top mb-5">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{asset('img/logo.png')}}" alt="logo" class="navbar-brand" width="50px">

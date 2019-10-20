@@ -2,17 +2,132 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de35706c-1b2a-4359-82b9-d62b78897d8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Backend/Att.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Cart_EAV/.idea/Cart_EAV.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/.styleci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Attachment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Attribute.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/AttributeValue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Console/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Exceptions/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/AttachmentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/AttributeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/AttributeValueController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/CartItemController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/PhotoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/ProductAttributeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Photo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/ProductAttribute.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/sleavely/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/app/sleavely/CartItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/bootstrap/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/broadcasting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/filesystems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/hashing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/logging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/queue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/config/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/factories/UserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_attachments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_attribute_values_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_attributes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_cart_items_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_carts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_photos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_product_attribute_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/migrations/2019_10_14_141117_create_products_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/lang/en/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/lang/en/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/lang/en/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/lang/en/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/sass/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/resources/views/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/routes/-web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/routes/channels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/routes/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/app/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/framework/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/framework/testing/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/framework/views/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/storage/logs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/tests/CreatesApplication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/webpack.mix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cart_EAV/yarn.lock" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TestMyPackage/.idea/TestMyPackage.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TestMyPackage/resources/views/admin.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TestMyPackage/resources/views/admin2.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../student_oriantaion_course/.idea/student_oriantaion_course.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Backend/Attribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Backend/Attribute.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Backend/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Backend/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/_mainnav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/_mainnav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../applications.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../auth_with_role_middleware" beforeDir="false" afterPath="$PROJECT_DIR$/../auth_with_role_middleware" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../aymanPKG" beforeDir="false" afterPath="$PROJECT_DIR$/../aymanPKG" afterDir="false" />
@@ -71,11 +186,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="-364">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#48#73#0#PHP" expanded="true" />
               </folding>
@@ -83,11 +198,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="425" column="28" lean-forward="true" selection-start-line="425" selection-start-column="28" selection-end-line="425" selection-end-column="28" />
+            <state relative-caret-position="72">
+              <caret line="430" column="20" lean-forward="true" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
               <folding>
                 <element signature="e#320#1876#0#HTML" />
                 <element signature="e#1910#3687#0#HTML" />
@@ -103,8 +218,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Backend/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="28" />
               <folding>
                 <element signature="e#31#52#0#PHP" expanded="true" />
                 <element signature="e#261#482#0#PHP" />
@@ -167,9 +282,7 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/cart/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/cart/checkout.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/30b6ceb4-cfcf-4f2b-943e-88b13eb06164/console.sql" />
-        <option value="$PROJECT_DIR$/resources/views/partials/_mainnav.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/cart/paypal-checkout.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Category/CategoryController.php" />
@@ -191,6 +304,8 @@
         <option value="$PROJECT_DIR$/app/Backend/Att.php" />
         <option value="$PROJECT_DIR$/app/Backend/Product.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/_mainnav.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/index.blade.php" />
       </list>
     </option>
@@ -286,11 +401,11 @@
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="312" />
-    <option name="y" value="140" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="122" />
+    <option name="y" value="56" />
+    <option name="width" value="1287" />
+    <option name="height" value="694" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -357,6 +472,13 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cart" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cart" type="b2602c69:ProjectViewProjectNode" />
@@ -456,12 +578,12 @@
       <workItem from="1570632986913" duration="8456000" />
       <workItem from="1570714404045" duration="15405000" />
       <workItem from="1570791545418" duration="21485000" />
-      <workItem from="1571239574533" duration="10244000" />
+      <workItem from="1571239574533" duration="16853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216215000" />
+    <option name="totallyTimeSpent" value="222824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,10 +595,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20893262" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
@@ -631,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/30b6ceb4-cfcf-4f2b-943e-88b13eb06164/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -681,13 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/_mainnav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -836,17 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Backend/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding>
-            <element signature="e#31#52#0#PHP" expanded="true" />
-            <element signature="e#261#482#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Backend/Att.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -857,20 +953,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/_mainnav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state>
+          <caret column="59" selection-start-column="59" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Backend/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="28" />
           <folding>
-            <element signature="e#48#73#0#PHP" expanded="true" />
+            <element signature="e#31#52#0#PHP" expanded="true" />
+            <element signature="e#261#482#0#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="425" column="28" lean-forward="true" selection-start-line="425" selection-start-column="28" selection-end-line="425" selection-end-column="28" />
+        <state relative-caret-position="72">
+          <caret line="430" column="20" lean-forward="true" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="20" />
           <folding>
             <element signature="e#320#1876#0#HTML" />
             <element signature="e#1910#3687#0#HTML" />
@@ -878,6 +989,16 @@
             <element signature="e#4899#5610#0#HTML" />
             <element signature="e#5618#15413#0#HTML" />
             <element signature="e#15424#18513#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Product/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-364">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#48#73#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
