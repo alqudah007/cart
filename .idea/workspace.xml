@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de35706c-1b2a-4359-82b9-d62b78897d8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Cart_EAV/.editorconfig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Cart_EAV/.env.example" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Cart_EAV/.gitattributes" afterDir="false" />
@@ -126,7 +125,6 @@
       <change afterPath="$PROJECT_DIR$/../TestMyPackage/resources/views/admin2.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../student_oriantaion_course/.idea/student_oriantaion_course.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttributevaluetoproductController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../applications.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../auth_with_role_middleware" beforeDir="false" afterPath="$PROJECT_DIR$/../auth_with_role_middleware" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../aymanPKG" beforeDir="false" afterPath="$PROJECT_DIR$/../aymanPKG" afterDir="false" />
@@ -236,7 +234,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_09_150956_create_products_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="650">
               <caret line="27" column="40" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="40" />
             </state>
           </provider>
@@ -440,10 +438,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="122" />
-    <option name="y" value="56" />
-    <option name="width" value="1287" />
-    <option name="height" value="694" />
+    <option name="x" value="152" />
+    <option name="y" value="70" />
+    <option name="width" value="1609" />
+    <option name="height" value="868" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -472,13 +470,13 @@
             <path>
               <item name="Cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cart" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cart" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cart" type="b2602c69:ProjectViewProjectNode" />
@@ -584,12 +582,12 @@
       <workItem from="1570714404045" duration="15405000" />
       <workItem from="1570791545418" duration="21485000" />
       <workItem from="1571239574533" duration="20363000" />
-      <workItem from="1571645709957" duration="1804000" />
+      <workItem from="1571645709957" duration="4244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228138000" />
+    <option name="totallyTimeSpent" value="230578000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,10 +599,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33813334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37022132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
@@ -620,7 +618,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32664436" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49924356" weight="0.3567447" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49924356" weight="0.5470086" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1007,7 +1005,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_09_150956_create_products_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="650">
           <caret line="27" column="40" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="40" />
         </state>
       </provider>
